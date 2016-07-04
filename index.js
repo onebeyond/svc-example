@@ -21,7 +21,8 @@ domain.run(() => {
                 system.restart((err, components) => {
                     if (err) die('Error restarting system', err)
                 })
-            }, delayInMillis).unref()
+            }, delayInMillis)
+            restart.unref()
         })
 
         process.on('config_reload_error', (err) => {
