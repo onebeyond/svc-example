@@ -14,7 +14,7 @@ domain.run(() => {
 
         process.on('config_reloaded', (config) => {
             clearTimeout(restart)
-            const delayHuman = get(components, 'config.service.reload.delay') || '60s'
+            const delayHuman = get(components, 'config.service.reload.window') || '60s'
             const delayInMillis = Math.floor(Math.random() * duration(delayHuman) / 1000) * 1000
             components.logger.info(format('Configuration reloaded. Service will restart in %s', delayHuman))
             restart = setTimeout(() => {

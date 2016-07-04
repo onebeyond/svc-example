@@ -1,7 +1,7 @@
 module.exports = {
     service: {
         reload: {
-            delay: '60s'
+            window: '60s'
         }
     },
     server: {
