@@ -9,29 +9,14 @@ const transports = require('./lib/transports')
 domain.run(() => {
     system.start((err, components) => {
         if (err) die('Error starting system', err)
+        const logger = components.logger
 
-        let restart
-
-        process.on('config_reloaded', (config) => {
-            clearTimeout(restart)
-            const delayHuman = get(components, 'config.service.reload.window') || '60s'
-            const delayInMillis = Math.floor(Math.random() * duration(delayHuman) / 1000) * 1000
-            components.logger.info(format('Configuration reloaded. Service will restart in %s', delayHuman))
-            restart = setTimeout(() => {
-                system.restart((err, components) => {
-                    if (err) die('Error restarting system', err)
-                })
-            }, delayInMillis)
-            restart.unref()
-        })
-
-        process.on('config_reload_error', (err) => {
-            components.logger.error('Error reloading config', err)
-        })
+        process.on('config_reloaded', (config) => scheduleRestart())
+               .on('config_reload_error', (err) => logger.error('Error reloading config', err))
 
         signals.forEach((signal) => {
             process.on(signal, () => {
-                components.logger.info(`Received ${signal}. Attempting to shutdown gracefully.`)
+                logger.info(`Received ${signal}. Attempting to shutdown gracefully.`)
                 system.stop(() => {
                     process.exit(0);
                 })
@@ -39,11 +24,27 @@ domain.run(() => {
         })
 
         domain.on('error', (err) => {
-            components.logger.error('Unhandled exception. Invoking shutdown', err)
+            logger.error('Unhandled exception. Invoking shutdown', err)
             system.stop(() => {
                 process.exit(1)
             })
         })
+
+        function scheduleRestart() {
+            clearTimeout(scheduleRestart.timeout)
+
+            const delayInHuman = get(components, 'config.service.reload.window') || '60s'
+            const delayInMillis = Math.floor(Math.random() * duration(delayInHuman) / 1000) * 1000
+
+            logger.info(format('Configuration reloaded. Service will restart in %s seconds', delayInMillis / 1000))
+
+            scheduleRestart.timeout = setTimeout(() => {
+                system.restart((err, components) => {
+                    if (err) die('Error restarting system', err)
+                })
+            }, delayInMillis)
+            scheduleRestart.timeout.unref()
+        }
     })
 })
 
