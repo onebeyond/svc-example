@@ -10,6 +10,8 @@ An example service using
 * Secrets obtained from a vault server
 * Automatically re-initialises when config changes
 * Graceful shutdown on unhandled exceptions, SIGINT and SIGTERM
+* Useful log decorators, including request scoped logging
+* JSON logging to stdout in "proper" environments, human friendly logging locally
 
 ## Use of domains
 Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
