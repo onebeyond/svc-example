@@ -14,6 +14,9 @@ An example service using
 ## Use of domains
 Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
 
+## Configuring Mongo
+The example uses monogo on localhost:27017. If you have docker installed you can run ```npm run mongo```
+
 ## Configuring Vault
 This example uses vault to hold secure secrets. To run locally use a docker container...
 
