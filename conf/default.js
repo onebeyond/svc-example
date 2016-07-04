@@ -31,6 +31,7 @@ module.exports = {
             'process',
             'system',
             'package.name',
+            'mongo',
             'service'
         ],
         exclude: [
