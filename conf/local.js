@@ -10,8 +10,5 @@ module.exports = {
             waitQueueTimeoutMS: 5000,
             readPreference: 'secondaryPreferred'
         }
-    },
-    logger: {
-        transport: 'console'
     }
 }

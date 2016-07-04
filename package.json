@@ -4,7 +4,7 @@
   "description": "An example microservice using systemic, confabulous and prepper",
   "main": "index.js",
   "scripts": {
-    "start": "SERVICE_ENV=local SERVICE_NAME=svc-example node index",
+    "start": "LOGGER_TRANSPORT=console SERVICE_ENV=local SERVICE_NAME=svc-example node index",
     "test": "mocha test --recursive",
     "mongo": "docker run --detach --publish 27017:27017 --name mongo mongo",
     "vault": "docker run --defach --link vault -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\""

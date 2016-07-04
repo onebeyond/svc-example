@@ -4,6 +4,7 @@ const duration = require('parse-duration')
 const format = require('util').format
 const domain = require('domain').create()
 const signals = ['SIGINT', 'SIGTERM']
+const transports = require('./lib/transports')
 
 domain.run(() => {
     system.start((err, components) => {
@@ -45,9 +46,8 @@ domain.run(() => {
     })
 })
 
-
 function die(message, err) {
-    console.error({
+    const event = {
         timestamp: new Date().toISOString(),
         level: 'error',
         message: message,
@@ -60,6 +60,7 @@ function die(message, err) {
             stack: err.stack,
             code: err.code
         }
-    })
+    }
+    transports[process.env.LOGGER_TRANSPORT || 'json'](event)
     process.exit(1)
 }
