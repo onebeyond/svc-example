@@ -1,6 +1,6 @@
 {
   "name": "svc-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An example microservice using systemic, confabulous and prepper",
   "main": "index.js",
   "scripts": {
