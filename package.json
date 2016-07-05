@@ -21,7 +21,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "husky": "^0.11.4",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "make-manifest": "^0.1.1"
   },
   "dependencies": {
     "async": "^2.0.0-rc.6",
@@ -43,7 +44,6 @@
     "lodash.once": "^4.0.0",
     "lodash.pick": "^4.2.1",
     "lodash.pluck": "^3.1.2",
-    "make-manifest": "^0.1.1",
     "mongodb": "^2.1.18",
     "on-headers": "^1.0.1",
     "parse-duration": "^0.1.1",
