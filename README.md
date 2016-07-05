@@ -12,6 +12,7 @@ An example service using
 * Graceful shutdown on unhandled exceptions, SIGINT and SIGTERM
 * Useful log decorators, including request scoped logging
 * JSON logging to stdout in "proper" environments, human friendly logging locally
+* Generates and exposes a manfiest file on /manifest showing the scm and build details that produced the service
 
 ## Use of domains
 Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
