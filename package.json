@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "LOGGER_TRANSPORT=console SERVICE_ENV=local SERVICE_NAME=svc-example node index",
+    "postversion": "make-manifest --extra BUILD_VERSION=${BUILD_VERSION}",
     "test": "mocha test --recursive",
     "mongo": "docker run --detach --publish 27017:27017 --name mongo mongo",
     "vault": "docker run --defach --link vault -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\""
@@ -46,6 +47,7 @@
     "parse-duration": "^0.1.1",
     "prepper": "0.0.4",
     "server-destroy": "^1.0.1",
-    "systemic": "^0.1.3"
+    "systemic": "^0.1.3",
+    "make-manifest": "git@github.com:guidesmiths/make-manifest.git"
   }
 }
