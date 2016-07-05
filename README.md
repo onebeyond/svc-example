@@ -5,14 +5,16 @@ An example service using
 * [confabulous](github.com/guidesmiths/confabulous)
 * [prepper](github.com/guidesmiths/prepper)
 
-## Behaviour
+## Features
 * Environmental config
 * Secrets obtained from a vault server
 * Automatically re-initialises when config changes
 * Graceful shutdown on unhandled exceptions, SIGINT and SIGTERM
 * Useful log decorators, including request scoped logging
 * JSON logging to stdout in "proper" environments, human friendly logging locally
-* Generates and exposes a manfiest file on /manifest showing the scm and build details that produced the service
+* A Dockerfile that uses settings from .npmrc and .nvmrc
+* The Dockerfile cache busts using package.json and shrinkwrap.json so npm install only runs when necessary
+* Deployed artifact (the container image) is traceable back to SCM commit via manifest.json, exposed via /manifest endpoint
 
 ## Use of domains
 Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
