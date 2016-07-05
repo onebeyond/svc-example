@@ -50,5 +50,13 @@
     "prepper": "0.0.4",
     "server-destroy": "^1.0.1",
     "systemic": "^0.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guidesmiths/svc-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guidesmiths/svc-example/issues"
+  },
+  "homepage": "https://github.com/guidesmiths/svc-example#readme"
 }
