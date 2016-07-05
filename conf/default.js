@@ -14,7 +14,8 @@ module.exports = {
     mongo: {
         options: {
             db: {
-                readPreference: 'secondaryPreferred'
+                readPreference: 'secondaryPreferred',
+                maxTimeMS: 30000
             },
             server: {
                 poolSize: 5,
@@ -23,7 +24,7 @@ module.exports = {
                 reconnectInterval: 1000,
                 socketOptions: {
                     keepAlive: 5000,
-                    connectTimeoutMS: 30000,
+                    connectTimeoutMS: 10000,
                     socketTimeoutMS: 30000,
                     noDelay: true
                 }
