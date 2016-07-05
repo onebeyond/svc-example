@@ -11,6 +11,25 @@ module.exports = {
             delay: '5s'
         }
     },
+    mongo: {
+        options: {
+            db: {
+                readPreference: 'secondaryPreferred'
+            },
+            server: {
+                poolSize: 5,
+                autoReconnect: true,
+                reconnectTries: 30,
+                reconnectInterval: 1000,
+                socketOptions: {
+                    keepAlive: 5000,
+                    connectTimeoutMS: 30000,
+                    socketTimeoutMS: 30000,
+                    noDelay: true
+                }
+            }
+        }
+    },
     logger: {
         transport: 'json',
         include: [
