@@ -6,7 +6,7 @@
   "scripts": {
     "start": "LOGGER_TRANSPORT=console SERVICE_ENV=local SERVICE_NAME=svc-example node index",
     "postversion": "make-manifest --extra BUILD_VERSION=${BUILD_VERSION}",
-    "test": "mocha test --recursive",
+    "test": "LOGGER_TRANSPORT=console SERVICE_ENV=test SERVICE_NAME=svc-example mocha --recursive tests",
     "mongo": "docker run --detach --publish 27017:27017 --name mongo mongo",
     "vault": "docker run --defach --link vault -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\""
   },
@@ -21,8 +21,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "husky": "^0.11.4",
+    "make-manifest": "^0.1.1",
     "mocha": "^2.5.3",
-    "make-manifest": "^0.1.1"
+    "request": "^2.72.0"
   },
   "dependencies": {
     "async": "^2.0.0-rc.6",
