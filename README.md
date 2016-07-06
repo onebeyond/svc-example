@@ -19,35 +19,34 @@ An example service using
 ## Use of domains
 Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
 
-## Configuring Mongo
-The example uses monogo on localhost:27017. If you have docker installed you can run ```npm run mongo```
+## Use of docker
+The example uses mongo on localhost:27017 and vault on localhost:8200. The easiest way to standup a test environment is with docker compose
+```
+docker network create example
+docker-compose up -d
+```
 
 ## Configuring Vault
-This example uses vault to hold secure secrets. To run locally use a docker container...
+This example uses vault to hold secure secrets. You will need to configure vault before the example service will start. To do this...
 
-#### Start a vault server in development mode
+1. View the vault logs
 ```
-docker run -d -p 8200:8200 --hostname vault --name vault sjourdan/vault
 docker logs vault
 ```
-#### Make note of the Unseal Key and Root Token and configure exports
+1. Make note of the Root Token and export the following environment variables
 ```
 export VAULT_ADDR=http://vault:8200
 export VAULT_TOKEN=<INSERT_TOKEN_HERE>
 ```
-#### Create an alias so you can execute vault commands from a container
+2. Create an alias so you can execute vault commands from a container
 ```
-alias vaultcmd="docker run --volume $(pwd)/conf/vault:/tmp --link vault --rm -e VAULT_ADDR -e VAULT_TOKEN sjourdan/vault"
+alias vaultcmd="docker run --volume $(pwd)/conf/vault:/tmp --link vault --net example --rm -e VAULT_ADDR -e VAULT_TOKEN sjourdan/vault"
 ```
-#### Unseal the vault so you can read / write secrets
-```
-vaultcmd unseal <INSERT_UNSEAL_KEY>
-```
-#### Upload a policy
+1. Upload a policy
 ```
 vaultcmd policy-write example-live /tmp/policies/live/example.json
 ```
-#### Configure an app-id login
+1. Configure an app-id login
 ```
 vaultcmd auth-enable app-id
 vaultcmd write auth/app-id/map/app-id/svc-example value=example-live display_name=svc-example

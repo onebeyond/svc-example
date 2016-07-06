@@ -1,0 +1,19 @@
+version: '2'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+     - 27017:27017
+
+  vault:
+    container_name: vault
+    image: sjourdan/vault
+    hostname: vault
+    ports:
+     - 8200:8200
+
+networks:
+  default:
+    external:
+      name: example

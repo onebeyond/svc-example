@@ -7,8 +7,7 @@
     "start": "LOGGER_TRANSPORT=console SERVICE_ENV=local SERVICE_NAME=svc-example node index",
     "postversion": "make-manifest --extra BUILD_VERSION=${BUILD_VERSION}",
     "test": "LOGGER_TRANSPORT=console SERVICE_ENV=test SERVICE_NAME=svc-example mocha --recursive tests",
-    "mongo": "docker run --detach --publish 27017:27017 --name mongo mongo",
-    "vault": "docker run --defach --link vault -e VAULT_ADDR=http://vault:8200 --entrypoint=/bin/sh sjourdan/vault -c \"vault auth $VAULT_TOKEN &>/dev/null; vault $VAULT_ARGS\""
+    "docker": "docker-compose up -d"
   },
   "keywords": [
     "microservice",
