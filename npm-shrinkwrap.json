@@ -1312,6 +1312,16 @@
       "from": "systemic@>=0.1.3 <0.2.0",
       "resolved": "https://registry.npmjs.org/systemic/-/systemic-0.1.3.tgz"
     },
+    "systemic-domain-runner": {
+      "version": "0.1.4",
+      "from": "systemic-domain-runner@latest",
+      "resolved": "https://registry.npmjs.org/systemic-domain-runner/-/systemic-domain-runner-0.1.4.tgz"
+    },
+    "systemic-service-runner": {
+      "version": "0.1.2",
+      "from": "systemic-service-runner@>=0.1.2 <0.2.0",
+      "resolved": "https://registry.npmjs.org/systemic-service-runner/-/systemic-service-runner-0.1.2.tgz"
+    },
     "to-iso-string": {
       "version": "0.0.2",
       "from": "to-iso-string@0.0.2",
