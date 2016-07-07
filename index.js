@@ -4,8 +4,7 @@ const transports = require('./lib/transports')
 
 runner(system).start((err, components) => {
     if (err) die('Error starting system', err)
-    const logger = components.logger
-    process.on('confabulous_reload_error', (err) => logger.error('Error reloading config', err))
+    process.on('confabulous_reload_error', (err) => components.logger.error('Error reloading config', err))
 })
 
 function die(message, err) {
