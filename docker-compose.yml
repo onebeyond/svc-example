@@ -1,5 +1,15 @@
 version: '2'
+
 services:
+
+  svc-example:
+    build: .
+    container_name: svc-example
+    command: npm test
+    links:
+     - mongo:mongo
+     - vault:vault
+
   mongo:
     container_name: mongo
     image: mongo
