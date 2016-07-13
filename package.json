@@ -6,7 +6,8 @@
   "scripts": {
     "start": "SERVICE_ENV=local node index",
     "test": "SERVICE_ENV=test mocha tests",
-    "docker": "docker-compose --file docker/docker-compose-local.yml up -d"
+    "docker": "docker-compose --file docker/docker-compose-local.yml up -d",
+    "precommit": "npm run test"
   },
   "keywords": [
     "microservice",
