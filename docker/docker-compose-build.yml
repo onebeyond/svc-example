@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  svc-example:
+    build: ..
+    image: quay.io/guidesmiths/svc-example
+    links:
+     - mongo:mongo
+     - vault:vault
+
+  mongo:
+    image: mongo
+
+  vault:
+    image: sjourdan/vault
+    hostname: vault

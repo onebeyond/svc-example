@@ -22,8 +22,8 @@ Domains have been deprecated, but as yet there's no alternative way to catch unh
 ## Use of docker
 The example uses mongo on localhost:27017 and vault on localhost:8200. The easiest way to standup a test environment is with docker compose
 ```
-docker network create example
-docker-compose up -d
+docker network create local
+docker-compose --file docker/docker-compose-local.yml up -d
 ```
 
 ## Configuring Vault
@@ -52,4 +52,14 @@ vaultcmd auth-enable app-id
 vaultcmd write auth/app-id/map/app-id/svc-example value=example-live display_name=svc-example
 vaultcmd write auth/app-id/map/user-id/example-live value=svc-example
 vaultcmd policy-write example-live /tmp/policies/live/example.json
+```
+
+## Running locally
+```
+npm start
+```
+
+## Running tests
+```
+npm test
 ```

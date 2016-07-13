@@ -1,6 +1,7 @@
 const system = require('./lib/system')
 const runner = require('systemic-domain-runner')
 const transports = require('./lib/transports')
+const pkg = require('./package')
 
 runner(system).start((err, components) => {
     if (err) die('Error starting system', err)
@@ -13,7 +14,7 @@ function die(message, err) {
         level: 'error',
         message: message,
         service: {
-            name: process.env['SERVICE_NAME'],
+            name: pkg.name,
             env: process.env['SERVICE_ENV']
         },
         error: {
@@ -22,6 +23,6 @@ function die(message, err) {
             code: err.code
         }
     }
-    transports[process.env.LOGGER_TRANSPORT || 'json'](event)
+    transports[process.env.LOGGER_TRANSPORT || 'console'](event)
     process.exit(1)
 }

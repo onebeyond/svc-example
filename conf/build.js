@@ -3,7 +3,7 @@ module.exports = {
         transport: 'console'
     },
     mongo: {
-        url: 'mongodb://127.0.0.1/example',
+        url: 'mongodb://mongo/example-test',
         options: {
             server: {
                 socketOptions: {

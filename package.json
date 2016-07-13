@@ -4,21 +4,22 @@
   "description": "An example microservice using systemic, confabulous and prepper",
   "main": "index.js",
   "scripts": {
-    "start": "LOGGER_TRANSPORT=console SERVICE_ENV=local SERVICE_NAME=svc-example node index",
-    "postversion": "make-manifest --extra BUILD_VERSION=${BUILD_VERSION}",
-    "test": "LOGGER_TRANSPORT=console SERVICE_ENV=test SERVICE_NAME=svc-example mocha --recursive tests",
-    "docker": "docker-compose up -d"
+    "start": "SERVICE_ENV=local node index",
+    "test": "SERVICE_ENV=test mocha tests",
+    "docker": "docker-compose --file docker/docker-compose-local.yml up -d"
   },
   "keywords": [
     "microservice",
     "systemic",
     "confabulous",
+    "prepper",
     "example"
   ],
   "author": "GuideSmiths Ltd",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
+    "env-test": "^1.0.0",
     "husky": "^0.11.4",
     "make-manifest": "^0.1.1",
     "mocha": "^2.5.3",
