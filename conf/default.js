@@ -11,7 +11,7 @@ module.exports = {
             delay: '5s'
         }
     },
-    mongo: {
+    mongodb: {
         options: {
             db: {
                 readPreference: 'secondaryPreferred',

@@ -2,7 +2,7 @@ module.exports = {
     logger: {
         transport: 'console'
     },
-    mongo: {
+    mongodb: {
         url: 'mongodb://mongo/example-test',
         options: {
             server: {

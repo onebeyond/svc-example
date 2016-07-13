@@ -52,7 +52,8 @@
     "prepper": "0.0.4",
     "server-destroy": "^1.0.1",
     "systemic": "^0.1.3",
-    "systemic-domain-runner": "^0.1.4"
+    "systemic-domain-runner": "^0.1.4",
+    "systemic-mongodb": "^1.0.1"
   },
   "repository": {
     "type": "git",
