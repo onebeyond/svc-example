@@ -1291,9 +1291,9 @@
       "resolved": "https://registry.npmjs.org/systemic-domain-runner/-/systemic-domain-runner-0.1.4.tgz"
     },
     "systemic-mongodb": {
-      "version": "1.0.1",
-      "from": "systemic-mongodb@>=1.0.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/systemic-mongodb/-/systemic-mongodb-1.0.1.tgz"
+      "version": "1.0.2",
+      "from": "systemic-mongodb@latest",
+      "resolved": "https://registry.npmjs.org/systemic-mongodb/-/systemic-mongodb-1.0.2.tgz"
     },
     "systemic-service-runner": {
       "version": "0.1.2",
