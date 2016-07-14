@@ -35,29 +35,28 @@ docker-compose --file docker/docker-compose-local.yml up -d
 This example uses vault to hold secure secrets. You will need to configure vault before the example service will start. To do this...
 
 1. View the vault logs
-```
-docker logs vault
-```
+
+        docker logs vault
+
 1. Make note of the Root Token and export the following environment variables
-```
-export VAULT_ADDR=http://vault:8200
-export VAULT_TOKEN=<INSERT_TOKEN_HERE>
-```
-2. Create an alias so you can execute vault commands from a container
-```
-alias vaultcmd="docker run --volume $(pwd)/conf/vault:/tmp --link vault --net example --rm -e VAULT_ADDR -e VAULT_TOKEN sjourdan/vault"
-```
+
+        export VAULT_ADDR=http://vault:8200
+        export VAULT_TOKEN=<INSERT_TOKEN_HERE>
+
+1. Create an alias so you can execute vault commands from a container
+
+        alias vaultcmd="docker run --volume $(pwd)/conf/vault:/tmp --link vault --net example --rm -e VAULT_ADDR -e VAULT_TOKEN sjourdan/vault"
+
 1. Upload a policy
-```
-vaultcmd policy-write example-live /tmp/policies/live/example.json
-```
+
+        vaultcmd policy-write example-live /tmp/policies/live/example.json
+
 1. Configure an app-id login
-```
-vaultcmd auth-enable app-id
-vaultcmd write auth/app-id/map/app-id/svc-example value=example-live display_name=svc-example
-vaultcmd write auth/app-id/map/user-id/example-live value=svc-example
-vaultcmd policy-write example-live /tmp/policies/live/example.json
-```
+
+        vaultcmd auth-enable app-id
+        vaultcmd write auth/app-id/map/app-id/svc-example value=example-live display_name=svc-example
+        vaultcmd write auth/app-id/map/user-id/example-live value=svc-example
+        vaultcmd policy-write example-live /tmp/policies/live/example.json
 
 ## Running locally
 ```
