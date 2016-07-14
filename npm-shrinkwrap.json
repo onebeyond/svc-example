@@ -218,6 +218,11 @@
       "from": "diff@1.4.0",
       "resolved": "https://registry.npmjs.org/diff/-/diff-1.4.0.tgz"
     },
+    "double-ended-queue": {
+      "version": "2.1.0-0",
+      "from": "double-ended-queue@>=2.1.0-0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz"
+    },
     "ecc-jsbn": {
       "version": "0.1.1",
       "from": "ecc-jsbn@>=0.1.1 <0.2.0",
@@ -1161,6 +1166,21 @@
       "from": "readable-stream@>=2.0.5 <2.1.0",
       "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.0.6.tgz"
     },
+    "redis": {
+      "version": "2.6.2",
+      "from": "redis@>=2.6.2 <3.0.0",
+      "resolved": "https://registry.npmjs.org/redis/-/redis-2.6.2.tgz"
+    },
+    "redis-commands": {
+      "version": "1.2.0",
+      "from": "redis-commands@>=1.2.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz"
+    },
+    "redis-parser": {
+      "version": "2.0.3",
+      "from": "redis-parser@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/redis-parser/-/redis-parser-2.0.3.tgz"
+    },
     "remote-origin-url": {
       "version": "0.5.1",
       "from": "remote-origin-url@>=0.5.1 <0.6.0",
@@ -1291,9 +1311,14 @@
       "resolved": "https://registry.npmjs.org/systemic-domain-runner/-/systemic-domain-runner-0.1.4.tgz"
     },
     "systemic-mongodb": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "from": "systemic-mongodb@latest",
-      "resolved": "https://registry.npmjs.org/systemic-mongodb/-/systemic-mongodb-1.0.2.tgz"
+      "resolved": "https://registry.npmjs.org/systemic-mongodb/-/systemic-mongodb-1.0.3.tgz"
+    },
+    "systemic-redis": {
+      "version": "1.0.2",
+      "from": "systemic-redis@latest",
+      "resolved": "https://registry.npmjs.org/systemic-redis/-/systemic-redis-1.0.2.tgz"
     },
     "systemic-service-runner": {
       "version": "0.1.2",

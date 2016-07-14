@@ -31,6 +31,8 @@ module.exports = {
             }
         }
     },
+    redis: {
+    },
     logger: {
         transport: 'json',
         include: [

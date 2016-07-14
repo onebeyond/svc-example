@@ -8,6 +8,12 @@ services:
     ports:
      - '27017:27017'
 
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+     - '6379:6379'
+
   vault:
     image: sjourdan/vault
     container_name: vault

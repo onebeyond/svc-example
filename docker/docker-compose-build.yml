@@ -7,10 +7,14 @@ services:
     image: quay.io/guidesmiths/svc-example
     links:
      - mongo:mongo
+     - redis:redis
      - vault:vault
 
   mongo:
     image: mongo
+
+  redis:
+    image: redis
 
   vault:
     image: sjourdan/vault
