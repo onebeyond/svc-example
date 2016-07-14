@@ -2035,9 +2035,9 @@
       "resolved": "https://registry.npmjs.org/systemic-mongodb/-/systemic-mongodb-1.0.3.tgz"
     },
     "systemic-pg": {
-      "version": "1.0.5",
+      "version": "1.0.6",
       "from": "systemic-pg@latest",
-      "resolved": "https://registry.npmjs.org/systemic-pg/-/systemic-pg-1.0.5.tgz"
+      "resolved": "https://registry.npmjs.org/systemic-pg/-/systemic-pg-1.0.6.tgz"
     },
     "systemic-redis": {
       "version": "1.0.2",
