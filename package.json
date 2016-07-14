@@ -6,8 +6,10 @@
   "scripts": {
     "start": "SERVICE_ENV=local node index",
     "test": "SERVICE_ENV=test mocha tests",
+    "lint": "eslint .",
+    "qa": "npm run test && npm run lint",
     "docker": "docker-compose --file docker/docker-compose-local.yml up -d",
-    "precommit": "npm run test"
+    "precommit": "npm run qa"
   },
   "keywords": [
     "microservice",
@@ -21,6 +23,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "env-test": "^1.0.0",
+    "eslint": "^3.0.1",
+    "eslint-config-imperative-es6": "^1.0.0",
+    "eslint-plugin-mocha": "^4.0.0",
     "husky": "^0.11.4",
     "make-manifest": "^0.1.2",
     "mocha": "^2.5.3",
