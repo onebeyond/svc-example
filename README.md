@@ -13,6 +13,7 @@ An example service using
 * Environmental config
 * Secrets obtained from a vault server
 * Automatically re-initialises when config changes
+* Orderly startup (establishes database connections before setting up http listeners)
 * Graceful shutdown on unhandled exceptions, SIGINT and SIGTERM
 * Useful log decorators, including request scoped logging
 * JSON logging to stdout in "proper" environments, human friendly logging locally
