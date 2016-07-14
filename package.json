@@ -7,7 +7,7 @@
     "start": "SERVICE_ENV=local node index",
     "test": "SERVICE_ENV=test mocha tests",
     "lint": "eslint .",
-    "qa": "npm run test && npm run lint",
+    "qa": "npm run lint && npm run test",
     "docker": "docker-compose --file docker/docker-compose-local.yml up -d",
     "precommit": "npm run qa"
   },
