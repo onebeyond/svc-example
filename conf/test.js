@@ -16,5 +16,9 @@ module.exports = {
     },
     redis: {
         url: 'redis://localhost/2'
+    },
+    postgres: {
+        database: 'postgres',
+        user: 'postgres'
     }
 }
