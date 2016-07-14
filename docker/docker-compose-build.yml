@@ -16,6 +16,9 @@ services:
   redis:
     image: redis
 
+  postgres:
+    image: postgres
+
   vault:
     image: sjourdan/vault
     hostname: vault

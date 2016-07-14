@@ -33,6 +33,8 @@ module.exports = {
     },
     redis: {
     },
+    postgres: {
+    },
     logger: {
         transport: 'json',
         include: [

@@ -16,5 +16,8 @@ module.exports = {
     },
     redis: {
         url: 'redis://redis/2'
+    },
+    postgres: {
+        host: 'postgres'
     }
 }
