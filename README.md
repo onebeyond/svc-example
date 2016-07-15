@@ -1,13 +1,13 @@
 # svc-example
 An example service using
 
-* [systemic](github.com/guidesmiths/systemic)
-* [confabulous](github.com/guidesmiths/confabulous)
-* [prepper](github.com/guidesmiths/prepper)
-* [systemic-express](github.com/guidesmiths/systemic-express)
-* [systemic-mongo](github.com/guidesmiths/systemic-mongo)
-* [systemic-redis](github.com/guidesmiths/systemic-redis)
-* [systemic-pg](github.com/guidesmiths/systemic-pg)
+* [systemic](https://github.com/guidesmiths/systemic)
+* [confabulous](https://github.com/guidesmiths/confabulous)
+* [prepper](https://github.com/guidesmiths/prepper)
+* [systemic-express](https://github.com/guidesmiths/systemic-express)
+* [systemic-mongo](https://github.com/guidesmiths/systemic-mongo)
+* [systemic-redis](https://github.com/guidesmiths/systemic-redis)
+* [systemic-pg](https://github.com/guidesmiths/systemic-pg)
 
 ## Features
 * Environmental config
