@@ -1400,9 +1400,9 @@
       "resolved": "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.1.2.tgz"
     },
     "prepper": {
-      "version": "0.0.4",
-      "from": "https://registry.npmjs.org/prepper/-/prepper-0.0.4.tgz",
-      "resolved": "https://registry.npmjs.org/prepper/-/prepper-0.0.4.tgz",
+      "version": "0.1.0",
+      "from": "prepper@latest",
+      "resolved": "https://registry.npmjs.org/prepper/-/prepper-0.1.0.tgz",
       "dependencies": {
         "lodash.isfunction": {
           "version": "3.0.8",
