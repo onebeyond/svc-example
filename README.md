@@ -67,3 +67,13 @@ npm start
 ```
 npm test
 ```
+
+## In container build, test and publish
+```
+docker-compose -f docker/docker-compose-build.yml build
+docker-compose -f docker/docker-compose-build.yml run -e --rm -e SERVICE_ENV=build svc-example node_modules/.bin/mocha tests
+docker-compose stop
+docker tag quay.io/guidesmiths/svc-example:latest quay.io/guidesmiths/svc-example:$COMMIT
+docker push quay.io/guidesmiths/svc-example
+```
+

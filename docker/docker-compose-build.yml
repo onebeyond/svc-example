@@ -4,7 +4,7 @@ services:
 
   svc-example:
     build: ..
-    image: quay.io/guidesmiths/svc-example
+    image: quay.io/guidesmiths/svc-example:latest
     links:
      - mongo:mongo
      - redis:redis
