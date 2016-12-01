@@ -1287,6 +1287,11 @@
       "from": "onetime@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/onetime/-/onetime-1.1.0.tgz"
     },
+    "optional": {
+      "version": "0.1.3",
+      "from": "optional@latest",
+      "resolved": "http://npm.tescloud.com/optional/-/optional-0.1.3.tgz"
+    },
     "optionator": {
       "version": "0.8.1",
       "from": "optionator@>=0.8.1 <0.9.0",
