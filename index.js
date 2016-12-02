@@ -3,6 +3,8 @@ const runner = require('systemic-domain-runner')
 const transports = require('./lib/transports')
 const pkg = require('./package')
 
+process.env.SERVICE_ENV = process.env.SERVICE_ENV || 'local'
+
 runner(system).start((err, components) => {
     if (err) die('Error starting system', err)
     process.on('confabulous_reload_error', (err) => components.logger.error('Error reloading config', err))

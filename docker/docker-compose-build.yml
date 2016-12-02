@@ -19,7 +19,3 @@ services:
 
   postgres:
     image: postgres
-
-  vault:
-    image: sjourdan/vault
-    hostname: vault
