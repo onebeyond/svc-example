@@ -20,13 +20,6 @@ services:
     ports:
      - '5432:5432'
 
-  vault:
-    image: sjourdan/vault
-    container_name: vault
-    hostname: vault
-    ports:
-     - '8200:8200'
-
 networks:
   default:
     external:
