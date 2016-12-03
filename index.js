@@ -1,6 +1,6 @@
 const system = require('./lib/system')
 const runner = require('systemic-domain-runner')
-const transports = require('./lib/transports')
+const transports = require('./lib/system/transports')
 const pkg = require('./package')
 
 process.env.SERVICE_ENV = process.env.SERVICE_ENV || 'local'
