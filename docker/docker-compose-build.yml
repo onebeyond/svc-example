@@ -8,7 +8,6 @@ services:
     links:
      - mongo:mongo
      - redis:redis
-     - vault:vault
      - postgres:postgres
 
   mongo:
