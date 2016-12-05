@@ -19,7 +19,7 @@ describe('Example Tests', () => {
     })
 
     it('should return manifest', (done) => {
-        request({ url: `http://${components.config.server.host}:${components.config.server.port}/manifest`, json: true }, (err, res, body) => {
+        request({ url: `http://${components.config.server.host}:${components.config.server.port}/__/manifest`, json: true }, (err, res, body) => {
             assert.ifError(err)
             assert.equal(res.statusCode, 200)
             assert.equal(res.headers['content-type'], 'application/json; charset=utf-8')
