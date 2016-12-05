@@ -36,7 +36,7 @@ module.exports = {
     postgres: {
     },
     logger: {
-        transport: 'json',
+        transport: 'bunyan',
         include: [
             'tracer',
             'timestamp',
