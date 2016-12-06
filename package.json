@@ -49,7 +49,7 @@
     "optimist": "^0.6.1",
     "optional": "^0.1.3",
     "prepper": "^0.1.0",
-    "systemic": "^0.7.0",
+    "systemic": "^0.8.0",
     "systemic-domain-runner": "^0.1.4",
     "systemic-express": "^1.0.1",
     "systemic-mongodb": "^1.0.3",

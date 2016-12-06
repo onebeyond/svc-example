@@ -123,6 +123,16 @@
       "from": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz",
       "resolved": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz"
     },
+    "hath": {
+      "version": "1.0.1",
+      "from": "hath@>=1.0.1 <2.0.0",
+      "resolved": "https://uwdc.jfrog.io/uwdc/api/npm/uw-npmjs/hath/-/hath-1.0.1.tgz"
+    },
+    "hath-assert": {
+      "version": "0.1.0",
+      "from": "hath-assert@>=0.1.0 <0.2.0",
+      "resolved": "https://uwdc.jfrog.io/uwdc/api/npm/uw-npmjs/hath-assert/-/hath-assert-0.1.0.tgz"
+    },
     "hogan.js": {
       "version": "3.0.2",
       "from": "https://registry.npmjs.org/hogan.js/-/hogan.js-3.0.2.tgz",
@@ -377,6 +387,40 @@
       "version": "4.4.0",
       "from": "lodash.toarray@>=4.2.4 <5.0.0",
       "resolved": "https://registry.npmjs.org/lodash.toarray/-/lodash.toarray-4.4.0.tgz"
+    },
+    "marv": {
+      "version": "0.7.0",
+      "from": "marv@latest",
+      "resolved": "https://uwdc.jfrog.io/uwdc/api/npm/uw-npmjs/marv/-/marv-0.7.0.tgz",
+      "dependencies": {
+        "async": {
+          "version": "2.1.4",
+          "from": "async@>=2.0.1 <3.0.0",
+          "resolved": "https://registry.npmjs.org/async/-/async-2.1.4.tgz"
+        },
+        "lodash": {
+          "version": "4.17.2",
+          "from": "lodash@>=4.15.0 <5.0.0",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.2.tgz"
+        }
+      }
+    },
+    "marv-pg-driver": {
+      "version": "0.7.0",
+      "from": "marv-pg-driver@latest",
+      "resolved": "https://uwdc.jfrog.io/uwdc/api/npm/uw-npmjs/marv-pg-driver/-/marv-pg-driver-0.7.0.tgz",
+      "dependencies": {
+        "async": {
+          "version": "2.1.4",
+          "from": "async@>=2.0.1 <3.0.0",
+          "resolved": "https://registry.npmjs.org/async/-/async-2.1.4.tgz"
+        },
+        "lodash": {
+          "version": "4.17.2",
+          "from": "lodash@>=4.15.0 <5.0.0",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.2.tgz"
+        }
+      }
     },
     "merge": {
       "version": "1.2.0",
@@ -694,9 +738,9 @@
       "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz"
     },
     "systemic": {
-      "version": "0.7.0",
+      "version": "0.8.0",
       "from": "systemic@latest",
-      "resolved": "https://registry.npmjs.org/systemic/-/systemic-0.7.0.tgz"
+      "resolved": "https://registry.npmjs.org/systemic/-/systemic-0.8.0.tgz"
     },
     "systemic-domain-runner": {
       "version": "0.1.4",
@@ -1117,6 +1161,11 @@
       "version": "1.0.2",
       "from": "wrappy@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
+    },
+    "xregexp": {
+      "version": "3.1.1",
+      "from": "xregexp@>=3.0.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/xregexp/-/xregexp-3.1.1.tgz"
     },
     "xtend": {
       "version": "4.0.1",
