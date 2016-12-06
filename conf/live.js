@@ -1,9 +1,13 @@
 module.exports = {
-    vault: {
-        url: 'http://localhost:8200',
-        path: 'secret/live/example',
-        method: 'app-id',
-        appId: 'svc-example',
-        userId: 'example-live'
+    mongodb: {
+        url: 'mongodb://production/example'
+    },
+    redis: {
+        url: 'redis://production:6379/1'
+    },
+    postgres: {
+        host: 'production',
+        database: 'postgres',
+        user: 'prod_user'
     }
 }

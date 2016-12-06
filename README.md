@@ -24,15 +24,9 @@ An example service using
 ## Use of domains
 Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
 
-## Use of docker
-The example uses mongo on localhost:27017. The easiest way to standup a test environment is with docker compose
-```
-docker network create local
-docker-compose --file docker/docker-compose-local.yml up -d
-```
-
 ## Running locally
 ```
+npm run docker
 npm start
 ```
 

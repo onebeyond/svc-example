@@ -1,39 +1,7 @@
 module.exports = {
-    service: {
-        reload: {
-            window: '60s'
-        }
-    },
     server: {
         host: '0.0.0.0',
-        port: 3000,
-        shutdown: {
-            delay: '5s'
-        }
-    },
-    mongodb: {
-        options: {
-            db: {
-                readPreference: 'secondaryPreferred',
-                maxTimeMS: 30000
-            },
-            server: {
-                poolSize: 5,
-                autoReconnect: true,
-                reconnectTries: 30,
-                reconnectInterval: 1000,
-                socketOptions: {
-                    keepAlive: 5000,
-                    connectTimeoutMS: 10000,
-                    socketTimeoutMS: 30000,
-                    noDelay: true
-                }
-            }
-        }
-    },
-    redis: {
-    },
-    postgres: {
+        port: 3000
     },
     logger: {
         transport: 'bunyan',
