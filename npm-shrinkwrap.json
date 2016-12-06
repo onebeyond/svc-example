@@ -294,10 +294,25 @@
       "from": "https://registry.npmjs.org/lodash.isarguments/-/lodash.isarguments-3.0.8.tgz",
       "resolved": "https://registry.npmjs.org/lodash.isarguments/-/lodash.isarguments-3.0.8.tgz"
     },
+    "lodash.isfunction": {
+      "version": "3.0.8",
+      "from": "lodash.isfunction@>=3.0.8 <4.0.0",
+      "resolved": "https://registry.npmjs.org/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz"
+    },
+    "lodash.isobject": {
+      "version": "3.0.2",
+      "from": "lodash.isobject@>=3.0.2 <4.0.0",
+      "resolved": "https://registry.npmjs.org/lodash.isobject/-/lodash.isobject-3.0.2.tgz"
+    },
     "lodash.isplainobject": {
       "version": "4.0.4",
       "from": "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.4.tgz",
       "resolved": "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.4.tgz"
+    },
+    "lodash.isstring": {
+      "version": "4.0.1",
+      "from": "lodash.isstring@>=4.0.1 <5.0.0",
+      "resolved": "https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz"
     },
     "lodash.istypedarray": {
       "version": "3.0.6",
@@ -635,26 +650,9 @@
       "resolved": "https://registry.npmjs.org/postgres-interval/-/postgres-interval-1.0.2.tgz"
     },
     "prepper": {
-      "version": "0.1.0",
+      "version": "0.2.0",
       "from": "prepper@latest",
-      "resolved": "https://registry.npmjs.org/prepper/-/prepper-0.1.0.tgz",
-      "dependencies": {
-        "lodash.isfunction": {
-          "version": "3.0.8",
-          "from": "https://registry.npmjs.org/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz",
-          "resolved": "https://registry.npmjs.org/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz"
-        },
-        "lodash.isobject": {
-          "version": "3.0.2",
-          "from": "https://registry.npmjs.org/lodash.isobject/-/lodash.isobject-3.0.2.tgz",
-          "resolved": "https://registry.npmjs.org/lodash.isobject/-/lodash.isobject-3.0.2.tgz"
-        },
-        "lodash.isstring": {
-          "version": "4.0.1",
-          "from": "https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz",
-          "resolved": "https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz"
-        }
-      }
+      "resolved": "https://registry.npmjs.org/prepper/-/prepper-0.2.0.tgz"
     },
     "R": {
       "version": "0.0.1",
@@ -688,7 +686,7 @@
     },
     "require-all": {
       "version": "2.0.0",
-      "from": "https://registry.npmjs.org/require-all/-/require-all-2.0.0.tgz",
+      "from": "require-all@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/require-all/-/require-all-2.0.0.tgz"
     },
     "resolve-from": {
@@ -738,9 +736,9 @@
       "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz"
     },
     "systemic": {
-      "version": "0.8.0",
+      "version": "1.0.0",
       "from": "systemic@latest",
-      "resolved": "https://registry.npmjs.org/systemic/-/systemic-0.8.0.tgz"
+      "resolved": "https://registry.npmjs.org/systemic/-/systemic-1.0.0.tgz"
     },
     "systemic-domain-runner": {
       "version": "0.1.4",
