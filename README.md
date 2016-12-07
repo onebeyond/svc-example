@@ -14,15 +14,15 @@ An example service using
 * Secrets obtained from a runtime location
 * Automatically re-initialises when config changes
 * Orderly startup / shutdown (establishes database connections before setting up http listeners and vice versa)
-* Graceful shutdown on unhandled exceptions, SIGINT and SIGTERM
+* Graceful shutdown on errors, unhandled rejections, unhandled exceptions, SIGINT and SIGTERM
 * Useful log decorators, including request scoped logging
 * JSON logging to stdout in "proper" environments, human friendly logging locally
 * The Dockerfile uses settings from .npmrc and .nvmrc
 * The docker build cache busts using package.json and npm-shrinkwrap.json so npm install only runs when necessary
-* Deployed artifact (a docker image) is traceable back to SCM commit via manifest.json, exposed via /manifest endpoint
+* Deployed artifact (a docker image) is traceable back to SCM commit via manifest.json, exposed via /__/manifest endpoint
 
 ## Use of domains
-Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will have to be updated when a new API emerges
+Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will be updated when a new API emerges
 
 ## Running locally
 ```
