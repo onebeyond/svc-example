@@ -858,9 +858,9 @@
       }
     },
     "systemic-domain-runner": {
-      "version": "1.0.1",
-      "from": "systemic-domain-runner@>=1.0.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/systemic-domain-runner/-/systemic-domain-runner-1.0.1.tgz"
+      "version": "1.1.0",
+      "from": "systemic-domain-runner@latest",
+      "resolved": "https://registry.npmjs.org/systemic-domain-runner/-/systemic-domain-runner-1.1.0.tgz"
     },
     "systemic-express": {
       "version": "1.1.0",
@@ -883,9 +883,9 @@
       "resolved": "https://registry.npmjs.org/systemic-redis/-/systemic-redis-1.0.2.tgz"
     },
     "systemic-service-runner": {
-      "version": "1.0.0",
-      "from": "systemic-service-runner@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/systemic-service-runner/-/systemic-service-runner-1.0.0.tgz"
+      "version": "1.1.0",
+      "from": "systemic-service-runner@>=1.1.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/systemic-service-runner/-/systemic-service-runner-1.1.0.tgz"
     },
     "through": {
       "version": "2.3.8",
