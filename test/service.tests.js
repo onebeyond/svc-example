@@ -2,7 +2,7 @@ const assert = require('chai').assert
 const system = require('../lib/system')
 const request = require('request')
 
-describe('Example Tests', () => {
+describe('Service Tests', () => {
 
     let config
     let sys

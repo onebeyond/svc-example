@@ -244,6 +244,11 @@
       "from": "glob@>=6.0.1 <7.0.0",
       "resolved": "https://registry.npmjs.org/glob/-/glob-6.0.4.tgz"
     },
+    "groundhog-day": {
+      "version": "1.0.1",
+      "from": "groundhog-day@latest",
+      "resolved": "https://registry.npmjs.org/groundhog-day/-/groundhog-day-1.0.1.tgz"
+    },
     "has-ansi": {
       "version": "2.0.0",
       "from": "has-ansi@>=2.0.0 <3.0.0",
@@ -311,10 +316,20 @@
       "from": "isarray@>=1.0.0 <1.1.0",
       "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
     },
+    "js-joda": {
+      "version": "1.1.17",
+      "from": "js-joda@>=1.1.12 <2.0.0",
+      "resolved": "https://registry.npmjs.org/js-joda/-/js-joda-1.1.17.tgz"
+    },
     "jsontoxml": {
       "version": "0.0.11",
       "from": "jsontoxml@0.0.11",
       "resolved": "https://registry.npmjs.org/jsontoxml/-/jsontoxml-0.0.11.tgz"
+    },
+    "jspack": {
+      "version": "0.0.4",
+      "from": "jspack@>=0.0.1",
+      "resolved": "https://registry.npmjs.org/jspack/-/jspack-0.0.4.tgz"
     },
     "lodash": {
       "version": "4.17.2",
@@ -712,7 +727,7 @@
     },
     "ramda": {
       "version": "0.21.0",
-      "from": "ramda@>=0.21.0 <0.22.0",
+      "from": "https://registry.npmjs.org/ramda/-/ramda-0.21.0.tgz",
       "resolved": "https://registry.npmjs.org/ramda/-/ramda-0.21.0.tgz"
     },
     "range-parser": {
@@ -927,6 +942,11 @@
       "from": "wordwrap@>=0.0.2 <0.1.0",
       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz"
     },
+    "world-clock": {
+      "version": "1.2.0",
+      "from": "world-clock@latest",
+      "resolved": "https://registry.npmjs.org/world-clock/-/world-clock-1.2.0.tgz"
+    },
     "wrappy": {
       "version": "1.0.2",
       "from": "wrappy@>=1.0.0 <2.0.0",
@@ -941,6 +961,11 @@
       "version": "4.0.1",
       "from": "xtend@>=4.0.0 <5.0.0",
       "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz"
+    },
+    "zoneinfo": {
+      "version": "0.1.8",
+      "from": "zoneinfo@>=0.1.8 <0.2.0",
+      "resolved": "https://registry.npmjs.org/zoneinfo/-/zoneinfo-0.1.8.tgz"
     }
   }
 }
