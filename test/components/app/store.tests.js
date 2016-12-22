@@ -39,7 +39,7 @@ function createSuite(label, system) {
     })
 
     it(`${label}: should roundtrip customer`, (done) => {
-        store.saveCustomer({id: '123', title: 'Mr', firstName: 'Bob', lastName: 'Holness', dateOfBirth: '1960-01-15' }, (err) => {
+        store.saveCustomer({id: '123', title: 'Mr', firstName: 'Bob', lastName: 'Holness', dateOfBirth: '1928-11-12' }, (err) => {
             assert.ifError(err)
             store.getCustomer('123', (err, record) => {
                 assert.ifError(err)
@@ -47,8 +47,8 @@ function createSuite(label, system) {
                 assert.equal(record.title, 'Mr')
                 assert.equal(record.firstName, 'Bob')
                 assert.equal(record.lastName, 'Holness')
-                // assert.equal(record.dateOfBirth, '2016-01-15')
-                // assert.equal(record.created, '2016-01-15')
+                assert.equal(record.dateOfBirth, '1928-11-12')
+                assert.equal(record.created.toISOString(), '2016-02-02T11:00:00.000Z')
                 assert.equal(record.updated, undefined)
                 done()
             })
@@ -64,9 +64,9 @@ function createSuite(label, system) {
     })
 
     it(`${label}: should update customer`, (done) => {
-        store.saveCustomer({id: '123', title: 'Mr', firstName: 'Bob', lastName: 'Holness', dateOfBirth: '2016-01-15' }, (err) => {
+        store.saveCustomer({id: '123', title: 'Mr', firstName: 'Bob', lastName: 'Holness', dateOfBirth: '1928-11-12' }, (err) => {
             assert.ifError(err)
-            store.saveCustomer({id: '123', title: 'Sir', firstName: 'Bob', lastName: 'Holness', dateOfBirth: '2016-01-15' }, (err) => {
+            store.saveCustomer({id: '123', title: 'Sir', firstName: 'Bob', lastName: 'Holness', dateOfBirth: '1928-11-12' }, (err) => {
                 assert.ifError(err)
                 store.getCustomer('123', (err, record) => {
                     assert.ifError(err)
@@ -74,9 +74,9 @@ function createSuite(label, system) {
                     assert.equal(record.title, 'Sir')
                     assert.equal(record.firstName, 'Bob')
                     assert.equal(record.lastName, 'Holness')
-                    // assert.equal(record.dateOfBirth, '2016-01-15')
-                    // assert.equal(record.created, '2016-01-15')
-                    // assert.equal(record.updated, '16/01/2016')
+                    assert.equal(record.dateOfBirth, '1928-11-12')
+                    assert.equal(record.created.toISOString(), '2016-02-02T11:00:00.000Z')
+                    assert.equal(record.updated.toISOString(), '2016-02-02T11:00:00.000Z')
                     done()
                 })
             })
