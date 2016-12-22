@@ -5,24 +5,24 @@ An example service using
 * [confabulous](https://github.com/guidesmiths/confabulous)
 * [prepper](https://github.com/guidesmiths/prepper)
 * [systemic-express](https://github.com/guidesmiths/systemic-express)
-* [systemic-mongo](https://github.com/guidesmiths/systemic-mongo)
-* [systemic-redis](https://github.com/guidesmiths/systemic-redis)
 * [systemic-pg](https://github.com/guidesmiths/systemic-pg)
+* [marv](https://github.com/guidesmiths/marv)
+* [groundhog-day](https://github.com/guidesmiths/groundhog-day)
 
 ## Features
-* Environmental config
+* Environmental configuration
 * Secrets obtained from a runtime location
-* Automatically re-initialises when config changes
-* Orderly startup / shutdown (establishes database connections before setting up http listeners and vice versa)
+* Automatically applies schema changes on startup
+* Automatically detects and applies runtime config changes
+* Orderly startup / shutdown (e.g. establishes database connections before setting up http listeners and vice versa)
 * Graceful shutdown on errors, unhandled rejections, unhandled exceptions, SIGINT and SIGTERM
 * Useful log decorators, including request scoped logging
 * JSON logging to stdout in "proper" environments, human friendly logging locally
 * The Dockerfile uses settings from .npmrc and .nvmrc
 * The docker build cache busts using package.json and npm-shrinkwrap.json so npm install only runs when necessary
 * Deployed artifact (a docker image) is traceable back to SCM commit via manifest.json, exposed via /__/manifest endpoint
-
-## Use of domains
-Domains have been deprecated, but as yet there's no alternative way to catch unhandled exceptions. This service will be updated when a new API emerges
+* Unit tests use stubbed clock for predicability
+* Unit tests use stubbed persistence store for speed
 
 ## Running locally
 ```

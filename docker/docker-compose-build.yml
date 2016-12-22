@@ -6,15 +6,7 @@ services:
     build: ..
     image: quay.io/guidesmiths/svc-example:latest
     links:
-     - mongo:mongo
-     - redis:redis
      - postgres:postgres
-
-  mongo:
-    image: mongo
-
-  redis:
-    image: redis
 
   postgres:
     image: postgres
