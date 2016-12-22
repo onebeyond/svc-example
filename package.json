@@ -33,6 +33,8 @@
   "dependencies": {
     "R": "0.0.1",
     "async": "^2.0.0-rc.6",
+    "body-parser": "^1.15.2",
+    "boom": "https://registry.npmjs.org/boom/-/boom-3.2.2.tgz",
     "bunyan": "^1.8.5",
     "chalk": "^1.1.3",
     "confabulous": "^1.0.0",

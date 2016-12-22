@@ -7,7 +7,7 @@ describe('Service Tests', () => {
     let config
     let sys
 
-    before((done) => {
+    before(done => {
         sys = system().start((err, components) => {
             if (err) return done(err)
             config = components.config
@@ -15,11 +15,11 @@ describe('Service Tests', () => {
         })
     })
 
-    after((done) => {
+    after(done => {
         sys.stop(done)
     })
 
-    it('should return manifest', (done) => {
+    it('should return manifest', done => {
         request({ url: `http://${config.server.host}:${config.server.port}/__/manifest`, json: true }, (err, res, body) => {
             assert.ifError(err)
             assert.equal(res.statusCode, 200)
