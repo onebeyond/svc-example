@@ -1,5 +1,5 @@
 {
-  "name": "svc-example",
+  "name": "guidesmiths-microservice-example",
   "version": "1.0.3",
   "description": "An example microservice using systemic, confabulous and prepper",
   "main": "index.js",
