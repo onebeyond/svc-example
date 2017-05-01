@@ -13,7 +13,6 @@ An example service using
 * Environmental configuration
 * Secrets obtained from a runtime location
 * Automatically applies schema changes on startup
-* Automatically detects and applies runtime config changes
 * Orderly startup / shutdown (e.g. establishes database connections before setting up http listeners and vice versa)
 * Graceful shutdown on errors, unhandled rejections, unhandled exceptions, SIGINT and SIGTERM
 * Useful log decorators, including request scoped logging
@@ -33,14 +32,5 @@ npm start
 ## Running tests
 ```
 npm test
-```
-
-## In container build, test and publish
-```
-docker-compose -f docker/docker-compose-build.yml build
-docker-compose -f docker/docker-compose-build.yml run --rm -e SERVICE_ENV=build svc-example npm test
-docker-compose -f docker/docker-compose-build.yml stop
-docker tag quay.io/guidesmiths/svc-example:latest quay.io/guidesmiths/svc-example:$COMMIT
-docker push quay.io/guidesmiths/svc-example
 ```
 

@@ -12,3 +12,4 @@ networks:
   default:
     external:
       name: local
+
