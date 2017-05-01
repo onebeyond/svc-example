@@ -8,7 +8,7 @@ describe('Store (memory)', () => {
 })
 
 describe('Store (postgres)', () => {
-    const system = require('../../../lib/system')().set('clock', clock())
+    const system = require('../../../server/system')().set('clock', clock())
     createSuite('postgres', system)
 })
 

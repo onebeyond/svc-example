@@ -1,5 +1,5 @@
 const assert = require('chai').assert
-const system = require('../lib/system')
+const system = require('../server/system')
 const request = require('request')
 
 describe('Service Tests', () => {

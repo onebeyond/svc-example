@@ -1,4 +1,4 @@
-const system = require('./lib/system')
+const system = require('./server/system')
 const runner = require('systemic-domain-runner')
 const bunyan = require('bunyan')
 const name = require('./package.json').name

@@ -1,6 +1,6 @@
-const system = require('../lib/system')
+const system = require('../server/system')
 const clock = require('groundhog-day').fake
-const store = require('../lib/components/app/memory-store')
+const store = require('../server/components/app/memory-store')
 
 module.exports = function() {
     return system()
