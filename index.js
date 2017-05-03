@@ -7,8 +7,9 @@ process.env.SERVICE_ENV = process.env.SERVICE_ENV || 'local'
 
 const emergencyLogger = process.env.SERVICE_ENV === 'local' ? console : bunyan.createLogger({ name: name })
 
-runner(system(), { logger: emergencyLogger }).start((err, components) => {
+runner(system(), { logger: emergencyLogger }).start((err, { logger, pkg }) => {
     if (err) die('Error starting system', err)
+    logger.info(`${pkg.name} has started`)
 })
 
 function die(message, err) {

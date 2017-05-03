@@ -3,6 +3,11 @@ module.exports = {
         host: '0.0.0.0',
         port: 3000
     },
+    routes: {
+        proxies: {
+            '/api/1.0/other': 'http://other.example.com'
+        }
+    },
     logger: {
         transport: 'bunyan',
         include: [
@@ -23,7 +28,6 @@ module.exports = {
             'process',
             'system',
             'package.name',
-            'mongo',
             'service'
         ],
         exclude: [

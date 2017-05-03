@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = function(options) {
 
     function start({ config }, cb) {
-        const directory = path.join(process.cwd(), 'migrations', 'postgres' )
+        const directory = path.join(process.cwd(), 'server', 'migrations', 'postgres' )
         const driver = pgDriver({ connection: config.postgres })
         marv.scan(directory, (err, migrations) => {
             if (err) return cb(err)
