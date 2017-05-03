@@ -8,8 +8,8 @@ module.exports = function() {
 
         app.use(express.static('./client/build'))
 
-        Object.keys(config.proxies).forEach(key => {
-            app.use(key, proxy({ target: config.proxies[key], logProvider: () => logger, changeOrigin: true }))
+        Object.keys(config.routes).forEach(key => {
+            app.use(key, proxy({ target: config.routes[key], logProvider: () => logger, changeOrigin: true }))
         })
 
         app.get('*', (req, res)  => {

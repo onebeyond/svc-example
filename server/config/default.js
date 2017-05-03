@@ -4,8 +4,10 @@ module.exports = {
         port: 3000
     },
     routes: {
-        proxies: {
-            '/api/1.0/other': 'http://other.example.com'
+        proxy: {
+            routes: {
+                '/api/1.0/other': 'http://other.example.com'
+            }
         }
     },
     logger: {
