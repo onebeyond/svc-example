@@ -1,5 +1,5 @@
 {
-  "name": "uw-service-billing-app-client",
+  "name": "guidesmiths-microservice-example-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
