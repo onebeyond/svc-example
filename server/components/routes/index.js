@@ -1,10 +1,8 @@
 const System = require('systemic')
-const prepperMiddleware = require('./prepper-middleware')
 const adminRoutes = require('./admin-routes')
 const apiRoutes = require('./api-routes')
 
 module.exports = new System({ name: 'routes' })
-    .add('middleware.prepper', prepperMiddleware()).dependsOn('app')
     .add('routes.admin', adminRoutes()).dependsOn('app', 'middleware.prepper', 'manifest')
     .add('routes.api', apiRoutes()).dependsOn('app', 'middleware.prepper', 'store')
     .add('routes').dependsOn('routes.admin', 'routes.api')
