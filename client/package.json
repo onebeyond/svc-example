@@ -1,0 +1,32 @@
+{
+  "name": "uw-service-billing-app-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "history": "^4.6.1",
+    "moment": "^2.17.1",
+    "react": "^15.4.2",
+    "react-addons-update": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-datetime": "^2.8.8",
+    "react-dom": "^15.4.2",
+    "react-redux": "https://registry.npmjs.org/react-redux/-/react-redux-5.0.4.tgz",
+    "react-router": "^4.0.0",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3000/"
+}

@@ -227,7 +227,7 @@ describe('API Routes', () => {
     }
 
     function getUrl(id) {
-        return id ? `http://${config.server.host}:${config.server.port}/api/1.0/customer/${id}`
-                  : `http://${config.server.host}:${config.server.port}/api/1.0/customer`
+        return id ? `http://${config.server.host}:${config.server.port}/api/1.0/customers/${id}`
+                  : `http://${config.server.host}:${config.server.port}/api/1.0/customers`
     }
 })

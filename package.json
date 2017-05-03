@@ -4,7 +4,9 @@
   "description": "An example microservice using systemic, confabulous and prepper",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "concurrently 'npm run server' 'npm run client'",
+    "server": "nodemon .",
+    "client": "cd client; npm start",
     "test": "mocha test",
     "lint": "eslint .",
     "qa": "npm run lint && npm run test",
@@ -22,6 +24,7 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
+    "concurrently": "^3.4.0",
     "eslint": "^3.0.1",
     "eslint-config-imperative-es6": "^1.0.0",
     "eslint-plugin-mocha": "^4.0.0",
