@@ -44,6 +44,7 @@
     "debug": "^2.2.0",
     "groundhog-day": "^1.0.1",
     "hogan.js": "^3.0.2",
+    "http-proxy-middleware": "^0.17.4",
     "lodash.get": "^4.3.0",
     "lodash.merge": "^4.4.0",
     "lodash.omit": "^4.3.0",
