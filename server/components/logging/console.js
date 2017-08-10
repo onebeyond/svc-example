@@ -2,7 +2,7 @@ const chalk = require('chalk')
 const hogan = require('hogan.js')
 const merge = require('lodash.merge')
 const has = require('lodash.has')
-const pluck = require('lodash.pluck')
+const omit = require('lodash.omit')
 
 const response = hogan.compile('{{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{request.method}}} {{{response.statusCode}}} {{{request.url}}}')
 const error = hogan.compile('{{{displayTracer}}} {{{displayLevel}}} {{package.name}} {{{message}}} {{{code}}}\n{{{error.stack}}} {{{details}}}')
@@ -23,7 +23,7 @@ module.exports = function() {
     }
 
     function onMessage(event) {
-        const details = pluck([], event)
+        const details = omit(event, ['message', 'level'])
         const data = merge({}, event, {
             displayTracer: has(event, 'tracer') ? event.tracer.substr(0, 6) : '------',
             displayLevel: event.level.toUpperCase(),
